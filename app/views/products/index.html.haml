@@ -1,0 +1,11 @@
+- @products.each do |product|
+  .div
+    %span
+      = product.product_name
+    %a
+      = image_tag product.image(:thumb)
+    %span
+      = product.price
+    %p
+      = product.description
+= link_to "Add Product", new_product_path

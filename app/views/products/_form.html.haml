@@ -1,0 +1,16 @@
+= form_for @product, :html => { :multipart => true } do |f| 
+  - @product.errors.full_messages.each do |error|
+    = error
+  = f.label :product_name
+  = f.text_field :product_name
+
+  = f.label :image
+  = f.file_field :image
+
+  = f.label :price
+  = f.text_field :price
+
+  = f.label :description
+  = f.text_area :description
+
+  = f.submit "Create"
